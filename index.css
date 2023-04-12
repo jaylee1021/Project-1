@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    background-color: black;
+    text-align: center;
+    background-image: url(./background.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+}
+
+h1 {
+    color: white;
+}
+
+button {
+    height: 100px;
+    width: 200px;
+    font-size: 30px;
+    border-radius: 20px;
+    background-color: yellow;
+}
