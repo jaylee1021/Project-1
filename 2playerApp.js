@@ -538,6 +538,7 @@ function collision() {
     ghosts.forEach(ghost => {
 
         ghost.update();
+
         if (Math.hypot(ghost.position.x - pacman.position.x, ghost.position.y - pacman.position.y) < ghost.radius + pacman.radius) {
             clearTimeout(runGame);
             alert('Player 1 lost!');

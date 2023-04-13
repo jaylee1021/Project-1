@@ -67,6 +67,29 @@ window.addEventListener('DOMContentLoaded', function () {
     runGame = setInterval(playGame, 20);
 })
 ```
+Player loses game whenever player makes contact with the ghost. 
+
+Once all pallets are eaten player wins the game or for 2 player mode player with higher score wins the game.  
+
+`clearTimeout` ends the game.
+
+```javascript
+if (Math.hypot(ghost.position.x - pacman.position.x, ghost.position.y - pacman.position.y) < ghost.radius + pacman.radius) {
+    clearTimeout(runGame);
+    alert('Player 1 lost!');
+} else if (Math.hypot(ghost.position.x - pacman2.position.x, ghost.position.y - pacman2.position.y) < ghost.radius + pacman2.radius) {
+    clearTimeout(runGame);
+    alert('Player 2 lost!');
+} else if (score1 + score2 === 3100) {
+    if (score1 > score2) {
+        alert('Player 1 wins!');
+        clearTimeout(runGame);
+    } else if (score2 > score1) {
+        alert('Player 2 wins!');
+        clearTimeout(runGame);
+    }
+}
+```
 PACMAN can only can move inside of a set boundary which are set through an array of arrays.  
 ```javascript
 const map = [

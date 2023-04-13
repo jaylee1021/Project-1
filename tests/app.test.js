@@ -52,3 +52,10 @@ describe('pacman', function () {
         expect(result).toBe(0);
     })
 })
+
+describe('score', function () {
+    it('should return a number', function () {
+        let result = score1;
+        expect(typeof result).toBe('number');
+    })
+})
