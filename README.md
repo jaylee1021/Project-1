@@ -36,6 +36,37 @@ Who ever gets more pallets without running into the ghost wins the game!
 3. Open the directory in your text editor of choice to view or edit the code
 
 # HOW IT WORKS
+PACMAN is creatd by a class and the game is ran with `setInterval`. 
+
+At the start of the game, Player 1 is pre-positioned at top left corner and Player 2 is pre-positioned at bottom right corner.
+```javascript
+window.addEventListener('DOMContentLoaded', function () {
+    pacman = new Pacman({
+        position: {
+            x: Box.width + Box.width / 2,
+            y: Box.height + Box.height / 2
+        },
+        velocity: {
+            x: 0,
+            y: 0
+        },
+        color: 'yellow'
+    })
+    pacman2 = new Pacman({
+        position: {
+            x: Box.width * 19 + Box.width / 2,
+            y: Box.height * 25 + Box.height / 2
+        },
+        velocity: {
+            x: 0,
+            y: 0
+        },
+        color: 'pink'
+    })
+
+    runGame = setInterval(playGame, 20);
+})
+```
 PACMAN can only can move inside of a set boundary which are set through an array of arrays.  
 ```javascript
 const map = [
@@ -135,4 +166,6 @@ Should I return to this game in the future, I would like to deploy following asp
 
 6. Tunnel to go to either side
 
-7. Animation for Ghosts
+7. Animation for Ghosts rather than just a simple circle
+
+8. Make the map prettier

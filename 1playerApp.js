@@ -20,8 +20,13 @@ class Box {
         this.image = image
     }
     render() {
-        ctx.fillStyle = 'blue';
-        ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
+        ctx.rect(this.position.x, this.position.y, this.width, this.height);
+        ctx.fillStyle = 'yellow';
+        ctx.fill();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'blue';
+        ctx.stroke();
+
     }
 }
 

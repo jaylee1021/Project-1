@@ -10,6 +10,7 @@ body {
 
 h1 {
     color: white;
+    background-color: black;
 }
 
 button {
@@ -18,4 +19,5 @@ button {
     font-size: 30px;
     border-radius: 20px;
     background-color: yellow;
+    border: 5px solid blue;
 }
